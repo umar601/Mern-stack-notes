@@ -2301,7 +2301,14 @@ let url = "https://dog.ceo/api/breeds/image/random";
 
 //git branch -m main   to rename branch if branch name show master
 
-//git push orgin main
+//git push orgin main  can write git push 
+
+//git -u orgin main once then writ e
+
+//git push only 
+
+
+
 
 
 
