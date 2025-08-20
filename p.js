@@ -2343,6 +2343,247 @@ let url = "https://dog.ceo/api/breeds/image/random";
 //git branch -d <branch name > to delete branch
 
 
+//to merge the feature with main branch we use the pull request
+
+//merging the code in brancges 
+
+//can be done in github and also in git 
+
+
+//git diff <branch name>   to see differnece between two branches 
+
+//git merge <branch name >
+
+//git pr   mean git pull request   help us to know which changes in our branch
+
+
+//conflicts main same chnages in both branches 
+
+//pull commands 
+
+//git pull origin main
+
+
+//merge conflicts 
+
+//when we have same changes in mutlple branches 
+
+
+//we have to solve these changes manually 
+
+//we can chnge sany or both
+
+
+
+//fixing mistakes 
+
+//if add something and not want to commit 
+
+//git reset <filename>   for single file
+
+
+//git reset   for all files 
+
+
+//if we have commit and and not wanted to commit 
+
+//git rest Head~1    points to last commit 
+
+//to delete any number of commits
+
+
+//git log to see all commits
+
+//git reset <hash>  hash is code in fornt of commit when type git log
+
+
+//and if want extra changes after that commit also delete
+
+//git reset--hard <commit hash>
+
+
+//forking
+
+//forking mean if want to contribute in other work 
+
+//click fork and make reop in our account 
+
+//make changes 
+
+//then click pull request 
+
+//fork is rough copy
+
+    
+
+//if stuck in end    presss  q
+
+
+
+//revising terminal and git hub
+
+
+//to print working directory                                  pwd
+
+//to clear screen                                             clear
+
+//to list all files in current location                        ls
+
+//to change directory                                         cd desktop
+
+//there are two ways of changing it                          
+
+//relative mean with in same location and start with file name like      cd desktop
+
+//absolute mean at any location and start with \        cd \users\umar\desktop\html revise 
+
+//if folder have space so put path in double quotes " "
+
+//to go back    cd ..     to go as many steps   cd ../../..
+
+//to make new folder     mkdir umae
+
+//to make new file      touch umar.txt
+
+//to remove empty folders     rmdir <folder name>
+
+//to remove filled folder rm -rf <folder name>   rf meand recursive force 
+
+//to remove file    rm <file name>
+
+//flags contain extra information   about the commands  eg   ls -a to print hidden files and so on
+
+//to auto fill the terminal we have to press the tab button
+
+//manuals anre the the information anout commadns and not work in windows
+
+//  \ is the root directory
+
+// ~ is the home directory 
+
+
+
+
+//git and github
+
+// git config --global user.name "umar abbas"
+//git config --global user.email "umarshah6444@gmail.com"
+
+
+//git is version control to tracj the chnages in our code 
+
+//git hub is website to make public and private repos
+
+//to check the git version   git --version
+
+//to clone a project mean move project from remote repo to our system for changes
+
+//git clone <http link of repo>
+
+//git status   to check the status of files
+
+//git add <file name>   to add the the files
+
+//git commit -m "message forcommit "
+
+//git push origin <branch name >
+
+//if we dont uplaod new file and only mad changes then add and commit can be done by one command
+
+//fit commit -am "message for commit"
+
+//writ once git push -u origin main  and then only rit git push for a particular branch
+
+//to host a ppject from our local sytem to gihub'
+
+
+//git init
+
+//git remote add origin <repo link >
+
+//git remote -v   to verify 
+
+//git commmit -m "adding project"
+
+//git push origin main
+
+
+//branches when multiple developers are working 
+
+//git branch   to check the branh
+
+//git checkout -b branh name    to make new branch
+
+//git branch -d branch name to delet branch
+
+//git bracnh -m <old name><new name >   to rename branchg
+
+
+//git diff <branch name >  to see differnece between branches
+
+//git merge <branch name >   to merge branches
+
+//git checkout <branch name >   to move form one branch to other
+
+//merge can also be done by git hub by clicking on pull request and alo using
+
+//git pr
+
+//mistake
+
+//to go back if some thing is add 
+
+//git reset <file name>
+
+//for all
+
+//git reset
+
+//to see all commit s
+
+//git log
+
+//to go back if commit is made 
+
+//git resest HEAD~1  number point ti node number
+
+//if want to go back to any commit   git rest hashnumber form git log
+
+//to delete the commit betwee git reset --hard hashnumber from git log
+
+//forking mean contrubuting in someone other project 
+
+//click fork and then commit changes and pull to that 
+
+
+//there are four type of git status
+
+//untracked mean current added fils
+
+//unmodified mean already added files
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
