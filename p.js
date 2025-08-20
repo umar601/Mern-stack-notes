@@ -2299,9 +2299,10 @@ let url = "https://dog.ceo/api/breeds/image/random";
 
 //git branch      to check branch
 
-//git branch -m main   to rename branch
+//git branch -m main   to rename branch if branch name show master
 
 //git push orgin main
+
 
 
 
