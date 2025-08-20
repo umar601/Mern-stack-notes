@@ -2314,9 +2314,33 @@ let url = "https://dog.ceo/api/breeds/image/random";
 //git commit -am"message of commit "
 
 
-//
+//git branches 
 
 
+//seprate copy of all previous changes when we wnat all previous chnages and now onwar two or three changes possible so we can make branches so different developer works parallel in same code with help of diferent branches 
+
+
+//main branch is the default branch 
+
+
+//when all changes complete and only required changes are merged to the main branch 
+
+
+//in easy word for collabration and make work faster
+
+
+//branch commands
+
+
+//git branch     to check the branch 
+
+//git branch -m <old name> <new name>    to rename the branch 
+
+//git checkout  <branch name>   from one branch to other
+
+//git checkout -b <new branch name>   to create new branch 
+
+//git branch -d <branch name > to delete branch
 
 
 
