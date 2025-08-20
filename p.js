@@ -2308,6 +2308,12 @@ let url = "https://dog.ceo/api/breeds/image/random";
 //git push only 
 
 
+//if we not added new file adn only made changes then we can add and commit combined like
+
+
+//git commit -am"message of commit "
+
+
 
 
 
