@@ -2286,6 +2286,23 @@ let url = "https://dog.ceo/api/breeds/image/random";
 //git push origin main  (orgin is place name) and main is the branch name
 
 
+//init command 
+
+
+//used to create new github rep  
+
+//git init
+
+//git remote add origin <link>
+
+//git remote -v     to verify remote
+
+//git branch      to check branch
+
+//git branch -m main   to rename branch
+
+//git push orgin main
+
 
 
 
