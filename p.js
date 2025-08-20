@@ -2562,7 +2562,11 @@ let url = "https://dog.ceo/api/breeds/image/random";
 
 //unmodified mean already added files
 
-//
+//modifies mean edit file
+
+//staged mean committes file
+
+
 
 
 
