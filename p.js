@@ -2567,6 +2567,47 @@ let url = "https://dog.ceo/api/breeds/image/random";
 //staged mean committes file
 
 
+//backend
+
+//nodejs is not a library not a frame work 
+
+//node js is js runtime environment which allow to run js outside webbrowser
+
+
+//oldly js is run in browsers by the interpraters in browsers  
+
+//with the help of nodejs we can make servers and can run js outside browser
+
+
+//node js is used for server side programming and also used in game and iot devices 
+
+
+//it is used to do server side programming
+
+
+//node installation
+
+//when we type node in terminal  it will tell us weather it is intall or not
+
+//node repl 
+
+//repl mean to read,evaluate,print and loop
+
+//to use node js type node in terminal and then write commands
+
+//node not recognize terminal command like ls or any other terminal commands
+
+//node also not recognise dom commands beacuse it is made from the engine of browser and c++ language so it not recognise dom command also
+
+
+//cannot mauplate dom becuase dom exist in the browser using html models
+
+
+//winow object not exist in node but its equivalent exit called global
+
+//to take help press help
+
+//to exit node type .node or two times crtl+c crtl+c
 
 
 
