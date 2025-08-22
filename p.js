@@ -1,4 +1,4 @@
-let s="umar"
+// let s="umar"
 
 // console.log(s.length)
 
@@ -1887,8 +1887,8 @@ let arr=[1,2,3,4,5]
 
 //better way  of above
 
-let image=document.querySelector("#dog")
-let image1=document.querySelector("#dog1")
+// let image=document.querySelector("#dog")
+// let image1=document.querySelector("#dog1")
 
 
 // fetch(url).then((response)=>{       //return the promis 
@@ -1910,8 +1910,6 @@ let image1=document.querySelector("#dog1")
 
 
 //fetch with async and await 
-
-let url = "https://dog.ceo/api/breeds/image/random";
 
 
 // async function getpics() {
@@ -2607,8 +2605,302 @@ let url = "https://dog.ceo/api/breeds/image/random";
 
 //to take help press help
 
-//to exit node type .node or two times crtl+c crtl+c
+//to exit node type .exit or two times crtl+c crtl+c
 
+
+//node js file is made with .js extension and from now onword we are working on node js and express js
+
+//to run node.js you must be in same directory other wisw it will thorw error
+
+
+// console.log("hello node js");
+// let a=5;
+// let b=5;
+// console.log(a+b)
+
+// for(let i=0;i<5;i++){
+//     console.log("hello",i)
+// }
+
+
+//process is object which provide information about and over the current node.js processs
+
+//node js mean the current work doing in node js 
+
+//it have many special properties allow input output version and current directory or memory related thing 
+
+
+//type process in node
+
+
+// console.log(process)
+
+
+//process.argv return array containing commad line argument (  argument are the inputs )when node.js processed and launched
+
+
+console.log(process.argv)   //it will return an array 
+
+
+//the thing we pass in function called parameter and in function it become arguments
+
+
+//node p "hello umar"  //these are arguments we pass to the file
+
+//in code
+
+let len=process.argv;
+
+
+//we are starting loop from 2 becaus first two are path
+
+// for(let i=2;i<len.length;i++){
+//     console.log("hello",len[i])
+// }
+
+
+// "umar","ali","abbas "  //consider as single so donot use quotes in argument 
+
+
+//export in files 
+
+
+//module.exports is used export things and can be used in other files
+
+//module.export can be array string or number but usually it will be object 
+
+// let fun=require("./math");   requiring math exports and ./ mean in same  directory
+
+
+
+// module.exports.sum=function(a,b){
+//     return a+b;
+// }
+
+
+//can only use .exports but not work for simple whic is down 
+
+// function multiply(a,b){
+//     return a*b;
+// }
+
+// function divide(a,b){
+//     return a/b;
+// }
+
+// module.exports="umar"
+
+// module.exports={
+//     sum:sum,
+//     ddivide:divide,
+//     multiply:multiply
+// }
+
+
+// module.exports=[sum,multiply,divide]
+
+
+// let fun=require("./math");
+
+// console.log(fun.sum(2,3))
+
+// console.log(fun.multiply(2,3))
+
+
+
+//if we return an array 
+
+
+// console.log(fun[0](2,3))
+
+
+
+//export in directories 
+
+//made require files in which you want to export any thing 
+
+//then in that dorectory mak a index.js file and require all these files and this will act as entry point and 
+
+//and then reqiure whole directory in require file 
+
+
+//index.js code
+
+// let apple=require("./apple")
+// let mango=require("./mango")
+// let orange=require("./orange")
+
+
+// let obj={
+//     apple,
+//     mango,
+//     orange
+// }
+
+// module.exports=obj;
+
+//  let arr=[apple,orange,mango];
+
+//  module.exports=arr
+
+
+//other file code 
+
+
+// let apple={
+//     name:"apple",
+//     colour:"red"
+// }
+
+// module.exports=apple;
+
+// let fruits=require("./fruits");
+
+// console.log(fruits.apple)
+
+
+
+//now talking abour npm 
+
+
+//very important 
+
+
+//stands for standardpackage manager for node js
+
+
+//imagine as library of package
+
+//someone other code that we can use called package
+
+//command line tool through which we can intall package through our command line 
+
+
+//npm is pre download with node to chack type npm
+
+
+//installing packages 
+
+//npm install <package name> or npm i >package name>
+
+//npm website name is npmjs.com
+
+
+//using figlet as exmaple of npm packages 
+
+//install package in specfic directory
+
+// var figlet = require("figlet");
+
+// figlet("umar shah", function (err, data) {
+//   if (err) {
+//     console.log("Something went wrong...");
+//     console.dir(err);
+//     return;
+//   }
+//   console.log(data);
+// });
+
+//when we install packages we have three thing downladed
+
+//node modules  contain every intall depdencies (dependency mean in which our code depent exmaple api or react if they are not available our code will stop working)
+
+//node module install our dependency and downloaded automatically
+
+//we have to delete it when sending someone our code becuase it can be download from package.json
+
+
+//packagelock.json   it is recored or exact version of every dependency or any sub dependency 
+
+
+//it is most important 
+
+//package.json  is similar to lock.json
+
+//it have descriptive and functional meta data)data about data) about our project such as name version and dependency owner lisence
+
+//to intall node modules we have package.json
+
+//npm install it will install all dependency in our json file dont need to write any file name
+
+//if make our own project and want package.json just write npm init an it will intall package.josn file
+
+//exampkle in my project 
+
+
+//local vs gloabl installation
+
+//till now we install local mean we can use it in our directory 
+
+//but global can be used any where 
+
+//npm install -g <pacakeg name>
+
+//before this once write other wise throw erroe in case of global
+
+//sudo chown -R $USER/user/local/lib/node_modules
+
+//it will give premission taht treat us as admin
+
+//but still cant use so write 
+
+//npm link <package name>
+
+//but it is prefered to use local
+
+
+//require vs import
+
+//with import we can selective import anything
+
+//use require in all prooject or import that good practice
+
+//require select all things not selective
+
+
+//i f using import use inly export
+//to export all
+
+// function sum(a,b){
+//     return a+b;
+// }
+
+// function multiply(a,b){
+//     return a*b;
+// }
+
+// function divide(a,b){
+//     return a/b;
+// }
+
+// export default {
+//     sum,multiply,divide
+// }
+
+//to import all
+
+// import math from "./math.js"; //if we hav eobject of export as above
+
+//the file name must be complet with extension
+
+// import {sum} from "./math.js";  //if we hav indiviual exports
+
+
+//if not work write type:module in package.json
+
+
+//it save memory becuse we not load complete file
+
+//require is syncronus but import is asyncronus 
+
+//can also import pacjkages 
+
+
+// import {sum} from "./math.js"
+
+// import m from "./math.js"  //for object and array 
+
+// console.log(m[0](2,3))
 
 
 

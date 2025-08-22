@@ -1,0 +1,20 @@
+{
+  "name": "html-revise",
+  "version": "1.0.0",
+  "description": "This repo contain mern stack complete notes",
+  "main": "math.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umar601/Mern-stack-notes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umar601/Mern-stack-notes/issues"
+  },
+  "homepage": "https://github.com/umar601/Mern-stack-notes#readme",
+  "type":"module"
+}
