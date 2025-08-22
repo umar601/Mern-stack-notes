@@ -2904,34 +2904,289 @@ let len=process.argv;
 
 
 
+//starting with express js 
+
+
+//express 
+
+//library  is collection of pre written code that can be used to perform various tasks such as axios which is used to fetch apis
+
+//used to do small work in large code 
+
+//in libraries we have control
+
+//framework is also set of pre written code that provide structure for developing software application eg express
+
+//help in structure of application 
+
+//in framework we donot have control framework define the structure of application
+
+
+//express is node.js framework used to help in making web applications
+
+//it used to server side programming 
+
+//four major uses
+
+//listen incoming request
+
+//parse the request according to js
+
+//match request  according to routes eg google.com/help match according to path
+
+//suitable response according to request 
+
+//can be download from npm 
+
+//npm install express
+
+//help in server side programming
+
+
+// let express=require("express");  //require express function
+
+// let app=express(); //help us to make server side application throught this app and this app is an object 
+
+// let port=8080;   //logical endpoint of a network connection is used to exchnage information between client and server
+
+
+//port can be 3000 or 8080 for custom servers
+
+
+// app.use((req,res)=>{   //accept any type of request get post patch delete
+
+//     res.send("hello worl");  //can send string array html or object 
+//     // console.log(req)
+//     // console.log(res)
+
+// })
+
+
+//sending object 
+
+// app.use((req,res)=>{   
+
+//     res.send({
+//         name:"umar",
+//         age:23
+//     })
+
+// })
+
+
+//sending html
+
+// app.use((req,res)=>{   
+
+//     let code=' <ol><li>umar</li><li>abbas</li><li>ali</li><li>hassan</li><li>hussain</li><ol>'
+
+//     res.send(code)
+
+// })
+
+
+//number 
+
+// app.use((req,res)=>{   
 
 
 
+//     res.send(3)
+
+// })
+
+//array 
+
+// app.use((req,res)=>{   
+
+
+//     let arr=[1,3,4,5,5,]
+
+//     res.send(arr)
+
+// })
+
+// app.get("/",(req,res)=>{
+
+//     res.send("hello world");
+
+// })
+
+// app.listen(port,()=>{
+//     console.log(`app is listening on ${port}`)
+// });
+
+
+//http request is text base and express cahnge into object and this is called parsing because server can be made in any lanaguage
+
+
+//testing may not work in hoppscoth for testing server it will work after downloading extenion
+
+
+//routing  for urls ef google.com/help instagram.com/umar google.com/search
+
+
+// app.get('/',(req,res)=>{    //its default path
+//     res.send("hello from routing")
+// })
+
+// app.get('/about',(req,res)=>{
+//     res.send("hello from about")
+// })
+
+// app.get('/home',(req,res)=>{
+//     res.send("hello from home")
+// })
+
+// app.use((req,res)=>{     ///if none of above then use use
+//     res.status(404).send("This path not exist")
+// })
+
+
+//response is one at a time for same time 
+
+
+//post 
+
+
+// app.post('/',(req,res)=>{
+//     res.send("hello from post")
+// })
+
+
+//nodemon automatically start the sever with code changes
+
+//install it gloablly 
+
+//npm i nodemon
+
+
+//to restart type rs
+
+
+// app.get('/',(req,res)=>{
+//     res.send("hehheh nodmon  ")
+// })
+
+
+//path parameters 
+
+// app.get("/",(req,res)=>{
+//     let username=req.params;
+//     res.send(`This account`)
+// })
+
+
+// app.get("/:username/:id",(req,res)=>{
+//     let {username,id}=req.params;  //params is object so we are doing destructing here so above pass and here must be same
+//     res.send(`This account belons to ${username} and id is ${id}`)
+// })
+
+
+//query string  
+
+
+//if we searchh appple 
+
+
+//www.google.com/search?q=apple 
+
+//handle request for query string
+
+// app.get("/search",(req,res)=>{
+
+//     let {q}=req.query
+//     res.send(`You searched ${q} `)
+
+// })
+
+//http://localhost:8080/search?q=apple
+
+// http://localhost:8080/search?q=apple&q=red
+
+
+// app.get("/:username",(req,res)=>{
+//     let {username}=req.params;
+//     let {q}=req.query;  //must be q 
+ 
+//     if(!q){
+//         res.send("you search nothing");
+//     }else{
+//         res.send(`${username} searched ${q}`)
+//     }
+// })
+
+
+//revision;
+
+// let express=require("express");
+// let app=express();
+// let port=8080;
 
 
 
+// //listening to port 
+
+// app.listen(port,()=>{
+//     console.log(`listening at the post ${port}`);
+// })
+
+
+// //routes for specfig paths
+
+
+// app.get('/',(req,res)=>{
+//     res.send("hello from home")
+// })
+
+// app.get('/projects',(req,res)=>{
+//     res.send("hello from projects")
+// })
+
+// app.get('/about',(req,res)=>{
+//     res.send("hello from about")
+// })
+
+// app.get('/contacts',(req,res)=>{
+//     res.send("hello from contatcts")
+// })
+
+
+// //path for varibales and custome users
+
+// // app.get('/:username',(req,res)=>{
+// //     let {username}=req.params;
+    
+// //     res.send(`hello ${username}`)
+// // })
+
+
+// //query string
+
+// app.get('/search',(req,res)=>{
+//     // let {username}=req.params;
+//       let {q}=req.query;
+    
+//     res.send(`hello you searched ${q}`)
+// })
 
 
 
+// //custom user and query strinhg
+
+// // app.get('/:username',(req,res)=>{
+// //     let {username}=req.params;
+// //       let {q}=req.query;
+    
+// //     res.send(`hello ${username} you searched ${q}`)
+// // })
 
 
+// //nothinhg match
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// app.use((req,res)=>{
+//     res.send("hello from all routes")
+// })
 
 
 
