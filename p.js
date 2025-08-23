@@ -3222,6 +3222,153 @@ let len=process.argv;
 //seeing how merge work
 
 
+//templating  are fixed layouts in which multiple infformation is provided
+
+//example of resume templat or any template in which we provie our information it make resume for us 
+
+//we can even make whole page just by templates
+
+//exmaple instagram pages for different user is not made with every user we jsut made template and just put information there
+
+
+//tools   handle bars and ejs
+
+//we are using ejs bcuase its papular and its in javascript
+
+//ejs stands for embedded javascript template 
+
+
+//ejs is simple templating language that let you generate HTML markup with palin javascript
+
+//install ejs by npm i ejs
+
+//we have to write this line to make ejs works
+
+//app.set("view engine","ejs");
+
+//app.get("/",(req,res)=>{
+
+//     res.render("filename.ejs")
+    
+// })
+
+
+//ejs is also a package we donot require it becuase express by default reuire it 
+
+
+//app.set is used to set different thing and one thing is view engine 
+
+//when we listen view it mean template 
+
+//we donot send response by ejs 
+
+//we render respnse and render mean sending files 
+
+//by default view engine expect that our all the templte must be in veiws directory so we make views directory
+
+
+//we can set any name of view folder but it prefer to use the name viws
+
+//in views directory make .ejs name file in which we write html js mix code and this will called template
+
+
+//view engine automatically search views folder and and then ejs file
+
+//install extension ejs
+
+//it will search views folder from where server is run so views only work only in that folder so solution is 
+
+//const path=require("path")
+//app.set("views",path.join(__dirname,"/views")) 
+
+//  we are shoeing path of view with help of path.join function and in this __dirname  current working directory and /views we giveing exact path
+
+
+//  nodemon instagram/index.js   if want to run from other older 
+
+
+//interpolation syntax 
+
+//interpolation refers to embedded expressions into maked up text
+
+//<%= %>  gives the ouput of code just like literals 
+
+//output inform of string 
+
+//<%%>  for conditional and loops
+
+//<%# #>  for comment s
+
+// <%-%>  need complete html code
+
+
+//if we assume data is coming form insta in form of json to access that we have to require 
+
+//const instadata = require(./data.json);
+
+//serving statics files 
+
+//mean want to send css and js files also in ejs
+
+//app.use(express.static(folder_name));
+
+//app.use(express.static("public"))
+
+//or 
+
+//app.use(express.static(path.join(__dirname,"public")))
+
+
+
+//by default static files in public folder
+
+
+//to to link   <link rel="stylesheet" href="/style.css">
+
+//donot need to write publicd
+
+
+//includes  in ejs 
+
+//ways to create sub templates 
+
+//make include folder in views and then files  and then include it where you nedd as under 
+
+// <%- include("includes/head.ejs") -%>
+
+//if footer include it in last 
+
+
+
+//  <h1>hello from template <%= username %> </h1>
+
+//   <% if (username == "umar") { %>
+//     <h1>hello <%= username %></h1>
+//   <% } else { %>
+//     <h1>Hello</h1>
+//   <% } %>
+
+//   <% for (let i = 0; i < arr.length; i++) { %>
+//     <h1><%= arr[i] %></h1>
+//   <% } %>
+
+
+
+
+
+
+
+
+
+
+
+//for nodemon to run you must be in folder not insode any foledr
+
+
+
+
+
+
 
 
 
