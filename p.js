@@ -3190,29 +3190,28 @@ let len=process.argv;
 
 
 
-const express = require ('express');
+// const express = require ('express');
 
-const app = express();
+// const app = express();
 
-const port = 8080;
+// const port = 8080;
 
-app.listen(port,()=>{
+// app.listen(port,()=>{
 
-    console.log("Request is listening at port",port);
-});
+//     console.log("Request is listening at port",port);
+// });
 
-app.get('/:username',(req,res)=>{
+// app.get('/:username',(req,res)=>{
 
-   let {username}=req.params;    
+//    let {username}=req.params;    
 
 
-    let code = `<div> <img alt="user image" src="userimage.jpeg" width="100px" height="100px"> <h1>Welocome to ${username} profile  </h1> <button>Followers</button> <button>Following</button></div> `
+//     let code = `<div> <img alt="user image" src="userimage.jpeg" width="100px" height="100px"> <h1>Welocome to ${username} profile  </h1> <button>Followers</button> <button>Following</button></div> `
 
-    // let code = `<img src="userimage.jpeg" alt="User Image" width="200" height="200">`;
+//     // let code = `<img src="userimage.jpeg" alt="User Image" width="200" height="200">`;
 
-    res.send(code);
-});
-
+//     res.send(code);
+// });
 
 
 
