@@ -2639,7 +2639,7 @@ let arr=[1,2,3,4,5]
 //process.argv return array containing commad line argument (  argument are the inputs )when node.js processed and launched
 
 
-console.log(process.argv)   //it will return an array 
+// console.log(process.argv)   //it will return an array 
 
 
 //the thing we pass in function called parameter and in function it become arguments
@@ -2649,7 +2649,7 @@ console.log(process.argv)   //it will return an array
 
 //in code
 
-let len=process.argv;
+// let len=process.argv;
 
 
 //we are starting loop from 2 becaus first two are path
@@ -3352,17 +3352,486 @@ let len=process.argv;
 //     <h1><%= arr[i] %></h1>
 //   <% } %>
 
-
-
-
-
-
-
-
-
-
-
 //for nodemon to run you must be in folder not insode any foledr
+
+
+//Misleaneous
+
+//Get and Post request 
+
+//GET
+
+//used to get some response 
+
+//data sent in query strings 
+
+//disadvantage limited string data and data is visble in the URL
+
+//want some response example searching something
+
+//POST
+
+//used to post something for create write and update 
+
+//Data is sent via request body and 
+
+//data can be any type
+
+//want to post something or any update
+
+
+//data in  post can be send through hop scotch throgh headers
+
+
+//whole paost data is in res.body 
+
+//but we need to parse
+
+//app.use(express.urlencoded({extended:true}));
+
+//if data is in url encoded form 
+
+//parse automaticlly and understand it 
+
+
+//app.use(express.json());
+
+//in case data in json form 
+
+
+//they are called middleware and we learn them soon 
+
+//bydefualt req.body dont understand type of data so in start it print undefined 
+
+
+// const express = require("express")
+
+// let app=express();
+
+// let port=8080;
+
+// app.use(express.urlencoded({extended:true}));
+
+// app.use(express.json());
+
+// app.listen(port,()=>{
+//     console.log("listening at port ",port);
+// })
+
+// app.get("/action",(req,res)=>{
+
+//     let {username,password}=req.query;
+
+//     console.log(username);
+//     console.log(password)
+
+//     res.send(username,password)
+// })
+
+// app.post("/action",(req,res)=>{
+
+//     console.log(req.body)
+
+//     // let {username,password}=req.body
+
+//     res.send("psot")
+// })
+
+
+
+//revisiting js oops
+
+
+//lakhs of student data so its not good approach to make every student name object repeating in programming is not good approach 
+
+// let stud1={
+//     name:"umar",
+//     age:18
+// }
+
+// let stud4={
+//     name:"umar",
+//     age:18
+// }
+// let stud3={
+//     name:"umar",
+//     age:18
+// }
+// let stud2={
+//     name:"umar",
+//     age:18
+// }
+
+
+
+//repetation in the code 
+
+
+//if we have function function is created seprately in memory for every student 
+
+
+//so we come with oop
+
+
+//object prototypes
+
+//in case of array when we print there is prototype
+
+//prototype is mechanism by which js inherit feature froom one other
+
+//its like simple protype object and all share properties having their own copies
+
+//all array object inherit these protypes information
+
+//protypes is single template object 
+
+//all js object have built in property called prototype 
+
+let ar=[1,2,3,3];
+
+
+//posssible 
+
+// ar.sayhelllo=()=>{
+//     console.log("hello");
+// }
+
+// let ar1=[1,2,3,3];
+
+
+// //posssible 
+
+// // ar1.sayhelllo=()=>{
+// //     console.log("hello");
+// // }
+
+// console.log(ar==ar1)   //false becuase of refrence
+
+// console.log(ar.sayhello==ar1.sayhello)   //false becuase of refrence
+
+
+// console.log("add".toLowerCase==="asdd".toLowerCase)  //true becuase of prototype
+
+
+// console.log("add"==="asdd") //false 
+
+
+//access prototy
+
+//to access specfic object prototype
+
+
+// console.log(ar.__proto__)
+
+
+//we can change defination of buit in like 
+
+// ar.__proto__.push=(n)=>{
+//     console.log("say hello")
+// }
+
+
+
+// ar.push(5)
+
+
+// ar.__proto__.pop=(n)=>{
+//     console.log("a")
+// }
+
+// ar.pop();
+
+//actual prototype of actual prtotype of array and string
+
+// console.log(Array.prototype)
+
+// console.log(String.prototype)
+
+
+//factory function
+
+// a function which create object 
+
+//not use many times 
+
+
+// let obj=(name,age)=>{
+//     let person={
+//         name:name,
+//         age:age,
+//        talk:function talk(){
+// console.log("hhelo")
+//        }
+//     //    talk:()=>{
+//     //     console.log("hhelo")
+//     //    }
+
+//     //    talk(){
+
+//     //     console.log("ehh")
+
+//     // }
+    
+//     }
+//     return person
+// }
+
+// let p1=obj("umar",10)
+
+// let p2=obj("ali",10)
+
+// console.log(p1.talk==p2.talk)  //false
+
+// console.log(p1.name==p2.name)  //false
+
+//but its also in efficent becuase the it creates copy of dunction for evry student and it is wast eof memory
+
+
+//better then factory function new concept called new operator 
+
+
+//new operator create instance of user defined object or built in if have constructor 
+
+
+
+//constructor are special function and its first letter must be capital and does not return anything 
+
+//can start with samll and return but not good
+
+
+//when function is used with this it is treated as constructor
+
+//it work in four steps
+
+//make empty object 
+
+//if have prototype proerty mean function the objet can access the prototype
+
+//execte all the function parameter with thus key workd and thuis refer to cureent object
+
+//
+
+
+// function Person(name,age){
+
+//     this.name=name;
+//     this.age=age
+   
+
+// }
+
+//to creat efunction in constructors 
+
+//  Person.prototype.talk=function(){
+//         console.log("ta")
+//     }
+
+
+
+// let p1 =new Person("umar",12)
+
+// let p2 =new Person("umar",12)
+
+
+// //same work as factory fucntion
+
+
+// console.log(p1==p2)  //flse
+
+
+// console.log(p1.talk==p2.talk)   //because of protiotype donot make copy share 
+
+
+
+//classes 
+
+
+//template for creting object
+
+//use special key word constructor
+
+
+// class person{
+
+//     constructor(name,age){
+//         this.name=name;
+//         this.age=age;
+//     }
+
+// //     talk(){   //cannoot use function keyyword
+// // console.log("hell0")
+// //     }
+
+// //     talk=()=>{   //cannoot use function keyyword
+// // console.log("hell0")
+// //     }
+// }
+
+
+// //we can write function inside
+
+
+// let p1=new person("umar",123)
+
+// let p2=new person("ali",123)
+
+
+// console.log(p1)
+
+
+// console.log(p1.talk===p2.talk) //true incase of simpel function
+
+//but in case of arow it is flase becuse it is store in variables 
+
+//automaticaly create protype
+
+//use same copy 
+
+
+//inheritance 
+
+
+//extends and super key word
+
+
+//extends is used to inherut properties
+
+
+//super mean parent class constructor called
+
+//inside normal
+
+
+//creat enew class on base of some class
+
+
+class person{   //base class
+
+    constructor(name,age){
+
+        console.log("parernt")
+        this.name=name;
+        this.age=age;
+    }
+
+    talk(){
+        console.log("hello",this.name)
+    }
+}
+
+class  student extends person{
+
+    constructor(name,age,makrs){
+
+          console.log("chike")
+
+         super(name,age)
+     
+        this.makrs=makrs;
+    }
+
+    talk(){
+        console.log("hhel0")
+    }
+
+   
+}
+
+class teacher extends person{
+
+    constructor(name,age,subject){
+  console.log("child")
+         super(name,age)
+       
+        this.subject=subject;
+      
+    }
+
+  
+}
+
+// console.log("D")
+
+let p1=new student("umar",12,12);
+
+console.log(p1.talk())
+
+
+//if we amde same name function in child class it override and child will workd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//revise 
+
+
+// async function getimages() {
+
+//     let url="https://dog.ceo/api/breeds/image/random"
+
+// let res=await axios.get(url);
+
+// let im=document.createElement("img");
+// console.log(res.data.message)
+// im.setAttribute("src",res.data.message)
+// let bod=document.querySelector("div")
+// bod.appendChild(im)
+
+// let res1=await axios.get(url);
+
+// let im1=document.createElement("img");
+// console.log(res1.data.message)
+// im1.setAttribute("src",res1.data.message)
+// // let bod=document.querySelector("div")
+// bod.appendChild(im1)
+    
+// }
+
+// getimages()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -16,7 +16,6 @@
     "url": "https://github.com/umar601/Mern-stack-notes/issues"
   },
   "homepage": "https://github.com/umar601/Mern-stack-notes#readme",
-  "type": "module",
   "dependencies": {
     "express": "^5.1.0"
   }
