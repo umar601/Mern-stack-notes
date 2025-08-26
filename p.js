@@ -3487,7 +3487,7 @@ let arr=[1,2,3,4,5]
 
 //all js object have built in property called prototype 
 
-let ar=[1,2,3,3];
+// let ar=[1,2,3,3];
 
 
 //posssible 
@@ -3705,84 +3705,59 @@ let ar=[1,2,3,3];
 //creat enew class on base of some class
 
 
-class person{   //base class
+// class person{   //base class
 
-    constructor(name,age){
+//     constructor(name,age){
 
-        console.log("parernt")
-        this.name=name;
-        this.age=age;
-    }
+//         console.log("parernt")
+//         this.name=name;
+//         this.age=age;
+//     }
 
-    talk(){
-        console.log("hello",this.name)
-    }
-}
+//     talk(){
+//         console.log("hello",this.name)
+//     }
+// }
 
-class  student extends person{
+// class  student extends person{
 
-    constructor(name,age,makrs){
+//     constructor(name,age,makrs){
 
-          console.log("chike")
+//           console.log("chike")
 
-         super(name,age)
+//          super(name,age)
      
-        this.makrs=makrs;
-    }
+//         this.makrs=makrs;
+//     }
 
-    talk(){
-        console.log("hhel0")
-    }
+//     talk(){
+//         console.log("hhel0")
+//     }
 
    
-}
+// }
 
-class teacher extends person{
+// class teacher extends person{
 
-    constructor(name,age,subject){
-  console.log("child")
-         super(name,age)
+//     constructor(name,age,subject){
+//   console.log("child")
+//          super(name,age)
        
-        this.subject=subject;
+//         this.subject=subject;
       
-    }
+//     }
 
   
-}
+// }
 
-// console.log("D")
+// // console.log("D")
 
-let p1=new student("umar",12,12);
+// let p1=new student("umar",12,12);
 
-console.log(p1.talk())
+// console.log(p1.talk())
 
 
 //if we amde same name function in child class it override and child will workd
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //revise 
 
@@ -3810,6 +3785,63 @@ console.log(p1.talk())
 // }
 
 // getimages()
+
+
+
+
+
+//Restful Api 
+
+
+
+//stand for representation state transfer 
+
+//important 
+
+//rest is architectural syle that defines a set of constraints to be used creating web services 
+
+//mean set of rules to creat web services 
+
+//according to my knowledge in resful api we are making api calls by following some rules 
+
+//in resful we cannot use verbs and prefer nouns eg 
+
+//we can use /posts insted of /see posts
+
+//if we not use this it doesnot cause any error but it is general practiice or rules followed by developers
+
+//to handle CRUD  we use differnt api 
+
+//creat  post
+
+//read   get
+
+//updat   patch to partially update data /put to complete update 
+
+//delete   delete 
+
+
+//in resfult we follow general practice but it can vary from developer to developer
+
+//in resful we follow a common path to do all needed operation
+
+
+//websit for practice 
+
+//pratices for rest api design use stack overflow or geekforgreeks
+
+
+//for uniqe ids in string
+
+//install the package 
+
+//npm install uuid
+
+// const { v4: uuidv4 } = require('uuid');
+// uuidv4(); 
+
+
+
 
 
 
