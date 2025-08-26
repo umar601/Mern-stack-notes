@@ -3841,6 +3841,20 @@ let arr=[1,2,3,4,5]
 // uuidv4(); 
 
 
+//we cannnot send put patch and delete request in html
+
+//we use package called methos override
+
+//npm i method-override
+
+//special thing in action _method=action
+
+// var methodOverride = require('method-override')
+// var app = express()
+ 
+// // override with the X-HTTP-Method-Override header in the request
+// app.use(methodOverride('X-HTTP-Method-Override'))
+
 
 
 
