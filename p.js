@@ -3857,6 +3857,366 @@ let arr=[1,2,3,4,5]
 
 
 
+//mongo db
+
+//no sql data base means no tables data is not stored in form of tables
+
+//shell
+
+// You checked earlier in services.msc → ✅ it’s running.
+
+//help to see commands
+
+//show dbs to show all data bases
+
+
+//to use mongb type mongosh and to go bach crt+c two times 
+
+//right quit or exit 
+
+//mongo shell is type of javascript shell and can write javascript commands
+
+//when we open mongo shell mongo db temporarily make database test where we store our data
+
+//the temporariry database is created named as test and it not show in show dbs becuase it is a temporary data base 
+
+//to create our own data base we can write use database name 
+
+//by this command if data base already exist wwe gon inside that and if not it willl create new data base 
+
+//use college it create data bse name college
+
+//but in mongo db a database wil remain temporary untill we store some data inside it 
+
+//to check in which data base we are we simple right command
+
+//db  show current data base name
+
+
+//in mongo db data is stored in form of documents 
+
+//collection of documents and we called it is collection
+
+//each document store individaul data
+
+//data in document is in form of key value pairs like jsin data and before writing to memory it is converted into bson
+
+
+//insertion in mongo db 
+
+
+//show collection   show all the collections of our data base 
+
+
+//there are many ways of inserting data in mongo db
+
+
+//db.collectionname.insertOne()  to insert single document and if data base is empty it create collection
+
+//db.collectionname.insertMany()  to insert many document 
+
+
+//data is stored in form of data base object
+
+//syntax
+
+// db.student.insertOne({name:"umar",age:18,marks:100})
+
+
+//output
+
+
+// {
+//   acknowledged: true,
+//   insertedId: ObjectId('68b26cdf71f32821f3735189')
+// }
+
+
+//mean mongo acknowledged the command and mongodb automaticallyy give some id to the document and we dont need to specify this id by ourself
+
+//and this id is the primary key of the document 
+
+
+//we can consider one document as single row in sql and id as primary key 
+
+
+//db.collectionname.find    to see all the data of collections
+
+
+//and output is in form of array it means different document are stored in form of array 
+
+
+//collection is collection of different documents and we can consider on document as one row in sql 
+
+//in sql we have to define schema in which we have to defien columns but in mongo db we can one key value pair in one document and other in some other document 
+
+//like sql we dont need to define and scema of table before like in sql
+
+//these thing we have to take notice 
+
+//but generally each collection must have same type of data
+
+
+//if we want to insert many documents at a time
+
+//then we pass array of document or you can say array of objects
+
+//to clear scrren cls
+
+//to read data of to fetch data in mongo we called it find
+
+
+//db.collectionname.find()   it return everything collection
+
+
+//db.collectioname.find({key:value}) if we want ot find all that macth this condition
+
+
+//return cursor means refrence to original
+
+//means find is just pointing to actual collection not returning
+
+
+//cursor is help in loop the data and access the single data
+
+
+//syntax
+
+//  db.student.find({marks:12})
+
+//output
+
+
+// [
+//   {
+//     _id: ObjectId('68b26ff371f32821f373518c'),
+//     name: 'hussain',
+//     age: 80,
+//     marks: 12
+//   }
+// ]
+
+//db.collectioname.findOne({key:value})
+
+
+//  db.student.findOne({marks:12}) if we wan tone that match this condition
+
+
+//return first matched value
+
+
+//return the document 
+
+
+
+//we can pass multiple condition like
+
+//we make key value pair in which we provide our neccessary condition
+
+
+//syntax
+
+
+// db.student.find({name:"hussain",marks:12})
+
+
+//output
+
+
+// [
+//   {
+//     _id: ObjectId('68b26ff371f32821f373518c'),
+//     name: 'hussain',
+//     age: 80,
+//     marks: 12
+//   }
+// ]
+
+
+//operators with find like mathimatical operator and logical operators
+
+
+//we use $ sign beofre operators
+
+
+// $eq  means equal to 
+
+// $gt  means greater thans
+
+// $gte  means greater than equal to
+
+// $lt   means less than
+
+// $lte  means less than equal to
+
+// $in   mean value in between 
+
+// $ne   means value not equal to 
+
+// $nin  mean not in 
+
+// $and  like and oprator
+
+// $not like not operator 
+
+// $nor  means logical nor retirn 0 if both true
+
+// $or  work like normal or 
+
+
+//array relate dmap realted can refer documentation
+
+
+//db.student.find({marks:{$gt:10}})
+
+//db.student.find({name:{$in:["umar","hassan"]}})
+
+//  db.student.find({$or:[{name:"umar"},{marks:{$gt:10}}]})
+
+
+//  db.student.find({
+// ...   $and: [
+// ...     { name: "umar" },
+// ...     { age: { $gt: 10 } }
+// ...   ]
+// ... })
+// ...
+// [
+
+
+//update 
+
+//db.colllection.updateOne()
+
+//db.colllection.updateOne(<filter>,<update>,<option>)
+
+//filter mean condition
+
+//uodate mean values
+
+//sometime we pass options
+
+//db.colllection.updateMany()
+
+//it update many students
+
+//db.colllection.replaceOne()
+
+//  db.student.updateOne({name:"umar"},{$set:{marks:20}})
+
+//$set is update operator
+
+//changes exiting fied if not exit make it and set its value
+
+
+//in repalce it change the whole document 
+
+//  db.student.replaceOne({name:"umar"},{uni:"umt"})
+
+
+//nesting
+
+
+//for nesting
+
+// db.student.insertOne({name:"umar",performance:{marks:30,grade:"A"}})
+
+//output
+
+//  {
+//     _id: ObjectId('68b27f0171f32821f373518d'),
+//     name: 'umar',
+//     performance: { marks: 30, grade: 'A' }
+//   }
+
+
+//to accesss this we use dot operator like
+
+// db.student.findOne({"performance.marks":30})
+// {
+//   _id: ObjectId('68b27f0171f32821f373518d'),
+//   name: 'umar',
+//   performance: { marks: 30, grade: 'A' }
+
+
+
+//delete in db
+
+
+//db.collectioname.deleteOne(<filter>,<option>)
+
+//delete only one
+
+//db.collectioname.deleteMany(<filter>,<option>)
+
+//delete all matches
+
+
+
+// 
+
+//  db.student.deleteMany({marks:{$gt:10}})
+
+
+//to empty whole collection
+
+
+//db.collectionname.deleteMany({})
+
+//it is with empty object
+
+
+//db.dropdatabase();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
