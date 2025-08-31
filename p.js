@@ -4236,21 +4236,21 @@ async function main() {
 
 //schema is acutually blue print
 
-const userSchema = new mongoose.Schema (
+// const userSchema = new mongoose.Schema (
 
-    {
+//     {
 
-        name : String,
-        age : Number,
-        email : String
+//         name : String,
+//         age : Number,
+//         email : String
 
-    }
+//     }
 
-)
+// )
 
 //model is a class with which we construct documents 
 
-const User = mongoose.model("User",userSchema);
+// const User = mongoose.model("User",userSchema);
 
 //we pass two arguments collection name and second is schema
 
@@ -4454,6 +4454,130 @@ const User = mongoose.model("User",userSchema);
 // User.findOneAndDelete({name:"hussain"}).then((res)=>{
 //     console.log(res)
 // })
+
+
+//schema Validation
+
+
+//rules for schema 
+
+
+// const userSchema = mongoose.Schema(
+
+//     {
+
+//     name:{
+//         type:String,
+//         required:true
+
+//     },
+//     age:{
+        
+//         type:Number,    //any number in string or muber is acceptable
+
+//     },
+//     marks:{
+//        type: Number
+//     }
+
+//     }
+// ) 
+
+// const User = new mongoose.model("student",userSchema);
+
+// let user1 = new User({name:"umar",age:10,marks:100});
+
+
+// user1.save().then((res)=>{
+//     console.log(res)
+// })
+
+
+
+//schema type optinos 
+
+
+//all options work during insertion and fails during updation to prevent this we use runValidators:true in update query
+
+
+const userSchema = mongoose.Schema(
+
+    {
+
+    name:{
+        type:String,
+        required:true,
+        maxlength:[10,"length is too long"]
+
+    },
+    age:{
+        
+        type:Number,    //any number in string or muber is acceptable
+        min:[1,"price is too low"]   //minimum value 
+
+    },
+    marks:{
+       type: Number
+    }
+    ,
+    discount:{
+        type:Number,
+        default:50
+    },
+    category:{
+        type:String,
+        enum:["umar","abbas"]
+    }
+
+    }
+) 
+
+
+//immutabble if we not want to change constarin in future
+
+//lowercase  convert to lower before store
+
+
+//in enum we create array an dgive set of values and can enter only that values only one from them
+
+
+//we can also store array 
+
+const User = new mongoose.model("student",userSchema);
+
+let user1 = new User({name:"umarrrrrrrrrr",age:-10,marks:100,category:"umar"});  //wrok for umar and abbas in category and not for other use names becuase of enum
+
+
+// user1.save().then((res)=>{
+//     console.log(res)
+// }) .catch((err) => {
+//     if (err.name === "ValidationError") {
+//       for (let field in err.errors) {
+//         console.log(err.errors[field].message);
+//       }
+//     } else {
+//       console.log(err.message); // fallback for other errors
+//     }
+// })
+
+// User.findByIdAndUpdate("68b4d2484df7f99a4afac2b6",{age:-10},{runValidators:true}).then((res)=>{
+//     console.log(res)
+// })
+// .catch((err)=>{
+//     console.log(err.errors.age.properties.message)
+// })
+
+//if we want to show our custom error if rule not follow or constraint not follow
+
+//we make array of that cosntraint and pass messqge with comma
+
+//in error write 
+
+// console.log(err.errors.age.properties.message)
+
+//age means in field erro others are buit in
+
+
 
 
 
