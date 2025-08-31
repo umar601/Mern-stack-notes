@@ -4169,6 +4169,316 @@ let arr=[1,2,3,4,5]
 //db.dropdatabase();
 
 
+//moongoose
+
+
+//it is a library that create connection between mongodb and node.js javascript run time environment
+
+//it is odm (object data modeling) library
+
+//it is npm library
+
+//there more libraries but odm is one of them 
+
+//we using mongoose to create connection and not always want to run mongodb from the shell
+
+
+//use of mongoos
+
+//if we want scema of of db collection
+
+//complex queris
+
+//install mongoose from npm 
+
+//official documentation is moongoosejs.com
+
+
+// const mongoose = require("mongoose");
+
+import mongoose from "mongoose";
+
+
+// await mongoose.connect('mongodb://127.0.0.1:27017/test');
+
+main().then(()=>{
+console.log("working")
+}).catch(err => console.log(err));
+
+async function main() {
+  await mongoose.connect('mongodb://127.0.0.1:27017/test');
+
+  // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
+}
+
+//connecting to database
+
+// let url = "http://localhost:8080/user"
+
+//http mean which protocol we are using 
+
+//localhost mean loopback addresss
+
+//8080 port number 
+
+//want to connect 
+
+//same for above data base connection
+
+// mongoose.connect("mongodb://127.0.0.1:27017/test")
+
+
+//schema
+
+//over structure of tabe in sql 
+
+//shape of document withing collection
+
+//schema is acutually blue print
+
+const userSchema = new mongoose.Schema (
+
+    {
+
+        name : String,
+        age : Number,
+        email : String
+
+    }
+
+)
+
+//model is a class with which we construct documents 
+
+const User = mongoose.model("User",userSchema);
+
+//we pass two arguments collection name and second is schema
+
+//generall model and collection name are same 
+
+//show our how our indivial document look
+
+//show collections to show collection
+
+//same name colection si ccreated in mongo shell we pass here like user and in mongo shell it become plural and what we write in capital it become small
+
+//insert data in mongoose
+
+
+//we have to create objects of model to create documents
+
+
+//model represent the collection and object represent the document 
+
+
+// let user1 = new User(
+//     {name:"umar",age:19,email:"umar@gmail.com"});
+// let user2 = new User({name:"umar",age:19,email:"umar@gmail.com"});
+// let user3 = new User({name:"umar",age:19,email:"umar@gmail.com"});
+
+
+// //save is also a asyncronus function
+
+
+// user1.save()
+
+// .then((res)=>{
+
+//     console.log(res)
+// })
+
+// .catch((e)=>{
+
+// console.log(e)
+
+// });
+// user2.save();
+
+
+//if want to insert many once 
+
+
+// User.insertMany(
+
+//     [
+//         {name:"umar",age:10,email:"umar@gamil.com"},
+//         {name:"ali",age:10,email:"umar@gamil.com"},
+//         {name:"abbas",age:10,email:"umar@gamil.com"},
+//         {name:"hassan",age:10,email:"umar@gamil.com"},
+//         {name:"hussain",age:10,email:"umar@gamil.com"},
+//     ]
+// ).then((res)=>{
+//     console.log(res)
+// })
+// .catch((e)=>{
+//     console.log(e)
+// })
+
+
+//mongoose use opeartion bufferring mean start using your models immediately and dnont wait wait mongodb to establish connection to mogodb
+
+
+//find operation moongoose 
+
+
+//model.find()  return us a query object not promise 
+
+//they are not promises but we can use .then function
+
+
+
+//to print all users or all documents 
+
+// User.find().then((res)=>{
+//     console.log(res)
+// }).catch((e)=>{
+//     console.log(e);
+// })
+
+
+//bases on condition
+
+
+// User.find({age:{$gt:10}}).then((res)=>{
+//     console.log(res)
+// }).catch((e)=>{
+//     console.log(e);
+// })
+
+// User.find({$and:[{name:"umar"},{age:{$gt:10}}]}).then((res)=>{
+//     console.log(res)
+// }).catch((e)=>{
+//     console.log(e);
+// })
+
+
+// User.find({age:{$in:[10,50]}}).then((res)=>{
+//     console.log(res)
+// }).catch((e)=>{
+//     console.log(e);
+// })
+
+
+//then we can use res as array of object
+
+
+// User.findOne({name:"umar"})
+// .then((res)=>{
+//     console.log(res)
+// })
+// .catch((e)=>{
+
+//     console.log(e)
+
+// })
+
+
+// User.findOne({$or:[{name:"umar"},{age:{$lt:10}}]})
+// .then((res)=>{
+//     console.log(res)
+// })
+// .catch((e)=>{
+
+//     console.log(e)
+
+// })
+
+// User.findOne({$and:[{name:"umar"},{age:{$lt:10}}]})
+// .then((res)=>{
+//     console.log(res)
+// })
+// .catch((e)=>{
+
+//     console.log(e)
+
+// })
+
+
+//find something specifically by id
+
+
+// User.findById("68b3a975770a3fd2fd362b93")
+// .then((res)=>{
+//     console.log(res)
+// })
+// .catch((e)=>{
+
+//     console.log(e)
+
+// })
+
+//update
+
+// User.updateOne({name:"umar"},{name:"umar shah"}).then((res)=>{
+//     console.log(res)
+// })
+
+// User.updateMany({name:"umar"},{age:23}).then((res)=>{
+//     console.log(res)
+// })
+
+// User.find().then((res)=>{
+//     console.log(res)
+// })
+
+//find and update in sinle func
+
+// User.findOneAndUpdate({name:"ali"},{name:"ayesha"},{new:true}).then((res)=>{
+//     console.log(res)
+// })
+
+
+//if new true it return update value other wise it return old dcumnent and update in shell in both case
+
+
+// User.findByIdAndUpdate(("68b3a975770a3fd2fd362b97"),{name:"ayesha"},{new:true}).then((res)=>{
+//     console.log(res)
+// })
+
+//deleete 
+
+
+// User.deleteOne({name:"ayesha"}).then((res)=>{
+//     console.log(res)
+// })
+
+
+// User.deleteMany({age:{$lt:10}}).then((res)=>{
+//     console.log(res)
+// })
+
+// User.findByIdAndDelete("68b3a975770a3fd2fd362b98").then((res)=>{
+//     console.log(res)
+// })
+
+// User.findOneAndDelete({name:"hussain"}).then((res)=>{
+//     console.log(res)
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
 
 
 
