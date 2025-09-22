@@ -1,34 +1,43 @@
-const express = require("express")
 
-let app=express();
+const express = require("express");
 
-let port=8080;
+const app = express();
 
-app.use(express.urlencoded({extended:true}));
 
-app.use(express.json());
 
-app.listen(port,()=>{
-    console.log("listening at port ",port);
-})
 
-app.get("/action",(req,res)=>{
 
-    let {username,password}=req.query;
+// app.use((req,res,next)=>{
+  
+//     req.responseTime = new Date();
+//  console.log(req.method,req.path,req.hostname,req.ip,req.responseTime)
+//  next()
+// })
 
-    console.log(username);
-    console.log(password)
 
-    res.send(username,password)
-})
+app.use((req,res,next)=>{
 
-app.post("/action",(req,res)=>{
+    let {token} = req.query;
 
-    console.log(req.body)
-
-    // let {username,password}=req.body
-
-    res.send("psot")
+    if(token=="umar"){
+        return next()
+    }
+    throw new Error("not allowed");
 })
 
 
+
+app.get("/random",(req,res)=>{
+
+  res.send("random");
+})
+
+
+app.use((req,res)=>{
+    res.status(404).send("page not found")
+})
+
+
+app.listen(8080,()=>{
+  console.log("app is listening")
+})
