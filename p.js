@@ -4500,37 +4500,37 @@ async function main() {
 //all options work during insertion and fails during updation to prevent this we use runValidators:true in update query
 
 
-const userSchema = mongoose.Schema(
+// const userSchema = mongoose.Schema(
 
-    {
+//     {
 
-    name:{
-        type:String,
-        required:true,
-        maxlength:[10,"length is too long"]
+//     name:{
+//         type:String,
+//         required:true,
+//         maxlength:[10,"length is too long"]
 
-    },
-    age:{
+//     },
+//     age:{
         
-        type:Number,    //any number in string or muber is acceptable
-        min:[1,"price is too low"]   //minimum value 
+//         type:Number,    //any number in string or muber is acceptable
+//         min:[1,"price is too low"]   //minimum value 
 
-    },
-    marks:{
-       type: Number
-    }
-    ,
-    discount:{
-        type:Number,
-        default:50
-    },
-    category:{
-        type:String,
-        enum:["umar","abbas"]
-    }
+//     },
+//     marks:{
+//        type: Number
+//     }
+//     ,
+//     discount:{
+//         type:Number,
+//         default:50
+//     },
+//     category:{
+//         type:String,
+//         enum:["umar","abbas"]
+//     }
 
-    }
-) 
+//     }
+// ) 
 
 
 //immutabble if we not want to change constarin in future
@@ -4543,9 +4543,9 @@ const userSchema = mongoose.Schema(
 
 //we can also store array 
 
-const User = new mongoose.model("student",userSchema);
+// const User = new mongoose.model("student",userSchema);
 
-let user1 = new User({name:"umarrrrrrrrrr",age:-10,marks:100,category:"umar"});  //wrok for umar and abbas in category and not for other use names becuase of enum
+// let user1 = new User({name:"umarrrrrrrrrr",age:-10,marks:100,category:"umar"});  //wrok for umar and abbas in category and not for other use names becuase of enum
 
 
 // user1.save().then((res)=>{
@@ -4582,35 +4582,198 @@ let user1 = new User({name:"umarrrrrrrrrr",age:-10,marks:100,category:"umar"}); 
 
 
 
+//authentication from youtube 
+
+//authentication mean we authenticate the user mean which user can use or access our website 
+
+//there are two patterns of authentication
+
+//stateful and stateless
+
+//stateful mean we are maintaining some data or state on server side 
+
+//stateless mean we are not maintaining any data or state on server side 
+
+//by taking example of parking the parking boy give give ticket number to us and that ticket number is pointing to specfic car which he stored in its own register its example of stateful
+
+//state is some data we map to some other data
+
+//incase of state ful we give username and password and in return server give unique id and keep it track in server
+
+//the unique id is called session unique id or session id 
+
+//when i have to request server i have to show my session id and then our sever send response according to our id
+
+
+//respnse id is in form of respnse or headers or cookies 
+
+
+//work flow
+
+
+//client request server and in between a middle ware which check the id and call the next funtion in between client and server 
+
+
+//on other the parking boy give us the ticeket with car number own it in this case he donot need to write any data on its regoister its example of stateless
+
+//working of staeful
+
+
+//we need collection of user so they can login
+//makes routes in user.js in routes
+//also make controller for user
+//then normally use it in index like other routes
+//make login and signup if login generate seeion id usuing uuid and then store it using hash map
+//then use function to make cookie 
+//inspect application cookies to see cookies
+//then make middle ware to to restrict
+//install cookie parse
+//when we restart map become emty and new uid is generated and its fault
 
 
 
 
+//middlewares 
+
+//intermediary between request and response 
+
+//function after the request and before the reponse
+
+//common middleware 
+
+//methodOverride
+
+//bodyparse
+
+//express.static
+
+//express.urlencoded
+
+//.use is used for all requests
+
+//and we can use it for particular request
+
+
+//properties
+
+//can access req and res object  like req.params ,req,body
+
+//channing is also possible 
+
+//pass control to other middlewares
+
+//can also send response to stop channing 
+
+
+//what our middlewares do 
+
+//execute any code
+
+//make changes to req,res object
+
+//end the request response cycle
+
+//call next middleware in stack
+
+
+// const express = require("express");
+
+// const app = express();
+
+
+// app.use((req,res,next)=>{
+  
+//   console.log("i m middle ware")
+
+//next()
+// })
+
+
+// app.get("/",(req,res)=>{
+
+//   res.send("home");
+// })
+
+// app.get("/random",(req,res)=>{
+
+//   res.send("random");
+// })
+
+
+// app.listen(8080,()=>{
+//   console.log("app is listening")
+// })
+
+
+//next is compulsory if middleware not sending any response 
 
 
 
+//different type of middle wares
+
+//application level
+
+//router level
+
+//error handling middle with new argument err 
+
+//bulit in middle ware express.static express.urlendcoded
+
+//third party other in form of npm package cookie parser
 
 
+//middle ware always run irrespective to req if send resquest to wrong path then it middle ware also work in this case 
 
 
-
- 
-
+//good program not write after next and we can also return the next 
 
 
+//logger used to print useful information on terminal 
+
+//looger middleware
 
 
+// app.use((req,res,next)=>{
+  
+//     req.responseTime = new Date();
+//  console.log(req.method,req.path,req.hostname,req.ip,req.responseTime)
+//  next()
+// })
 
 
+//in app.use callback we can pass middleware function 
+//array of middle ware 
+//combination of middleware comma seprated
+//all above
+
+//if we pass no path it will work for all requests 
+
+//if we pass some path it will work for only that path only 
+
+// app.use((req,res,next)=>{
+
+//     let {token} = req.query;
+
+//     if(token=="umar"){
+//         return next()
+//     }
+//     res.status(404).send("not allowed");
+// })
 
 
+//error handling 
 
+//express default error handler 
 
+//two stages of code
 
+//developement and production stage
 
+//is middle ware function and it is at the end of all middleware function
 
+//can send using throw new error
 
-
+//error handling is very important express have dfault error handler but we need to make our custom error for our websites 
 
 
 
