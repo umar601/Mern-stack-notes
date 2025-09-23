@@ -4915,6 +4915,45 @@ async function main() {
 //this will avoid repetaion of try and catch  and make code efficeint 
 
 
+//mongoose error 
+
+//by err.name we can find the error name 
+
+//we can perform specfic task by iusing these name
+
+
+//like this
+
+
+//  if(err.name=="ReferenceError"){
+//     return res.send("coder mistake")
+//   }
+
+
+//we can make function and can also pass in the if condition to solve to particular error 
+
+
+//validation
+
+//data we are sending is correct 
+
+//two side of validation
+
+//client side and server side validation
+
+//client mean the data we are sending to server must be correct for that we are using form validation mean type or required or all other valid data 
+
+
+//server side validation mean data is stored according to rules and schema of that data and if any error in case of storing data must be handle efficiently
+
+
+//form errors may vary form browser to browser to so we use bootsrap error handling pre defined things 
+
+
+//from now onward we are shfiting towards our airbnb project 
+
+
+
 
 
 

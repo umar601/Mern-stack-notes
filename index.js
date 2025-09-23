@@ -81,6 +81,14 @@ app.get("/home",asyncWrap(async(req,res,next)=>{
 }))
 
 
+let handlerOfValidation = (err)=>{
+
+  console.log("handling or performing task");
+
+  return err;
+}
+
+
 //custom error handling middleware
 
 app.use((err,req,res,next)=>{
@@ -88,6 +96,9 @@ app.use((err,req,res,next)=>{
   // console.log("_____________errr____________________")
   // res.send(err)
 
+  if(err.name=="ReferenceError"){
+    err=handlerOfValidation(err);
+  }
   let {status=500,message="some message"} = err
 
   //we are assigning value to status and message if we not throw error it by default set it to 500 and som message 
