@@ -4777,39 +4777,139 @@ async function main() {
 //  websites 
 
 
-//22-09-2025
+//error handling 
+
+
+//error hanlding middleware 
+
+
+// app.use((err,req,res,next){
+
+//   console.log("error handling middle ware ")
+// })
+
+
+//if it not found any specfic status then it by default set to 500 
+
+//in error handling middle wares the next serach for not error handling middle ware so we have to pass error in next 
+
+//other wise throw error path not found even it exists
+
+//in this case it it actually print the error
+
+
+//custom error class to show error in better manner 
+
+
+//two type of status codes 
+
+//from client side its between 400 to 500
+
+//from server also error also happen 
+
+
+// app.use((err,req,res,next)=>{
+
+//   // console.log("_____________errr____________________")
+//   // res.send(err)
+
+//   let {status=500,message="some message"} = err
+
+//   //we are assigning value to status and message if we not throw error it by default set it to 500 and som message 
+
+//   res.status(status).send(message)
+// })
+
+
+//handling async errors 
+
+
+//app crash in this case because asnc not call next by default and so we have to explitly call next and in next we pass error
+
+//like this 
+
+
+//  next(new expresserro(400,"not"))
+
+//in mongoose id length also matters
+
+//in case of mongoose if we pass invalid id in findbyid in this case it not throw any error but it pass some inavlid value in the result 
+
+//using try catch 
+
+//different types of error if we search id and it not exist 
+
+//some validation error means rules we define in our model and we can handle these using try catch
+
+
+//write all code in try and then at end wite catch 
+
+//like
+
+// app.get("/home",async(req,res,next)=>{
+
+//   // next(new expresserro(400,"not"))
+
+//   try{
+
+//     let chat = await user.findById("Sdf");
+//   }
+//   catch(err){
+//     next(err)
+//   }
+  
+// })
+
+
+//using wrap async a better way of try catch and avoid repitaion
+
+//we made new function and give name wrap async and can give any name and this function return function and argument is also function 
+
+
+//return function have paramters req,res,next
+
+
+//syntax of async wrpa function
+
+
+// function wrapasync(fun){
+
+//   return function(req,res,next){
+
+//     fun(req,res,next).catch((err)=>{
+//       console.log(err)
+//     })
+//   }
+// }
+
+
+//and pass whole call back asunc call back in async wrap
+
+
+//example
 
 
 
+// function asyncWrap(fun){
+
+//   return function(req,res,next){
+//     fun(req,res,next).catch((err)=>{
+//    next(err)
+//     })
+//   }
+// }
 
 
+// app.get("/home",asyncWrap(async(req,res,next)=>{
+
+//   // next(new expresserro(400,"not"))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//     let chat = await user.findById("Sdf");
+  
+ 
+  
+// }))
 
 
 

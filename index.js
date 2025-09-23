@@ -3,9 +3,11 @@ const express = require("express");
 
 const app = express();
 
+const expresserro = require("./expresserror")
 
 
 
+//loggeer
 
 // app.use((req,res,next)=>{
   
@@ -14,28 +16,90 @@ const app = express();
 //  next()
 // })
 
+//task to verify token 
 
-app.use((req,res,next)=>{
+// app.use((req,res,next)=>{
 
-    let {token} = req.query;
+//     let {token} = req.query;
 
-    if(token=="umar"){
-        return next()
-    }
-    throw new Error("not allowed");
+//     if(token=="umar"){
+//       return next()
+//     }
+//     // throw new Error("not allowed");
+//     throw new expresserro(401,"access denied")
+
+    
+// })
+
+
+// app.get("/",(req,res)=>{
+//   res.send("eh")
+// })
+
+
+// app.get("/random",(req,res)=>{
+
+//   abc=abc
+
+//   res.send("random");
+// })
+
+
+// let adminRoute = (req,res,next)=>{
+
+//   throw new expresserro(403,"unauthorized");
+// }
+
+
+
+// app.use("/admin",adminRoute,(req,res)=>{
+
+//   res.send("admin");
+
+// })
+
+
+function asyncWrap(fun){
+
+  return function(req,res,next){
+    fun(req,res,next).catch((err)=>{
+   next(err)
+    })
+  }
+}
+
+
+app.get("/home",asyncWrap(async(req,res,next)=>{
+
+  // next(new expresserro(400,"not"))
+
+
+    let chat = await user.findById("Sdf");
+  
+ 
+  
+}))
+
+
+//custom error handling middleware
+
+app.use((err,req,res,next)=>{
+
+  // console.log("_____________errr____________________")
+  // res.send(err)
+
+  let {status=500,message="some message"} = err
+
+  //we are assigning value to status and message if we not throw error it by default set it to 500 and som message 
+
+  res.status(status).send(message)
 })
 
 
 
-app.get("/random",(req,res)=>{
-
-  res.send("random");
-})
-
-
-app.use((req,res)=>{
-    res.status(404).send("page not found")
-})
+// app.use((req,res)=>{
+//     res.status(404).send("page not found")
+// })
 
 
 app.listen(8080,()=>{
