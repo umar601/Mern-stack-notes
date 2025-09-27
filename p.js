@@ -4950,26 +4950,6 @@ async function main() {
 //form errors may vary form browser to browser to so we use bootsrap error handling pre defined things 
 
 
-//from now onward we are shfiting towards our airbnb project erorors and other work
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//from now onward we are shfiting towards our airbnb 
 
 
