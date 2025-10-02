@@ -4953,6 +4953,81 @@ async function main() {
 //from now onward we are shfiting towards our airbnb project 
 
 
+//link bootstap and 
+
+//for error add js also copy paste
+
+//for error we use novalidate in form to avoid by deualt error by forlder 
+
+//then add form validation class and form control class in each input 
+
+//then is valid and in valid div at end each input for cutom text on complete and not 
+
+
+
+//can also make layouts to avoid copying heading in each section in ejs just use it
+
+// npm install express-ejs-layouts
+
+
+//<% layout("filename")%>
+
+//same like include we also includdes header and foortes to avoid copy paste
+
+// <%includes("filename") %>
+
+//server isde scehema validationis done throgh joi 
+
+
+//cookiees
+
+//web hhtp or server cookies are same name
+
+//samll block of data created by web server when user is browsing website placed in user device by browser
+
+//works of cookies
+
+//session management
+
+//temporay storage for differnet pages in case add to cart product 
+
+//also for tracking mean which website you oftenly use 
+
+//personaliztion
+
+//gnerally cookies store in form of name value pair 
+
+//rember which page we visit before 
+
+
+//cookie is shown in multiple tabs or pages of same website
+
+//send cookie("name","value");
+
+//to read cookie we need package cookie parser
+
+//cookie is jut piece of information
+
+//signed cookie for example with seal
+
+//res.cookie("name","umar",{signed:true});
+
+//it protect cookie from change
+
+//for signed in cookie parser midde ware we have to pass some secret string
+
+//in this case that go in encode form
+
+
+
+
+
+
+
+
+
+
+
 
 
 
