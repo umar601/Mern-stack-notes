@@ -5019,7 +5019,207 @@ async function main() {
 //in this case that go in encode form
 
 
+// state 
+
+//user interact with application and we call it one session 
+
+//there are two type of states
+
+//stateful protocol 
+
+// requires server to save the information usinh cookies 
+
+//information include status and session information and this information may vary website to website
+
+
+
+//eg ftp
+
+
+//stateless protocol   
+
+
+// doesnot require server to save information using sessions or cookies
+
+//htpp we normal followd till now 
+
+
+//express information help us to amke our hhtp stateless to stateful
+
+//example  we acn add things to cart without login signup and when we login they are in our cart this is done through sessions which store the useful information
+
+//we can not store in cokkie because cookiestorage is small and not secure thats why we store in session and store that session id in cookie so its become secure and also save the space 
+
+//express session temporary storage 
+
+//in express session secret is always required can be single or array of secret 
+
+
+//imp 
+
+
+//session id is same throug out same in different tabs in same browser 
+
+
+//temporary storage is not used for production satge for that we use third party session storage at time of production 
+
+
+//store information in session can access any route 
+
+//connect-flash is npm package special area for sessions used for storing messages messages are written to flash and cleared after being shown to the user 
+
+//connect flash are shown once and then disapearo refresh 
+
+//apear single time 
+
+//used for errors success etc 
+
+//for flash sessions are compulsory
+
+//to send message on flash 
+
+// req.flash("key to identify","message to send ")
+
+//res.locals is used to send information to ejs file and it you can say use glabally mean can access in any ejs file
+
+//re.locals can be accessed in any of template 
+
+  // app.use(expressSession(
+  //   {secret:"secret",
+  //   resave:false,
+  //   saveUninitialized:true,
+  //   cookie:{
+  //     expires:Date.now()+7*24*60*60*1000,  //mean after one week
+  //   maxAge:7*24*60*60*1000,
+  //   httpOnly:true  //for cross scripting attacks
+
+  //   }
+  // }));
+
+
+  //autentication and authorization 
+
+  //authentication mean who some is mean who can use our website login signup
+
+  //authorization mean who can use which part of website
+
+  //authorization mean which part of website who can use admin user or functionality like these 
+
+
+  //how passwords are stored 
+
+  //password are stored in hashed form using differnet hashing packages becuase even if database hack so hacker cannot get the the password 
+
+  //hased form cannot be decrypt mean we cannot go from hash form to original form 
+
+
+  //characteristics of hashing function
+
+  //every input output length is fixed 
+
+  //one way function mean we can get output from input but can get input from iutput eg module func math.abs is example of one way
+
+//there are different output for differnet input of same length
+
+//small changes innput can cause major change in output 
+
+
+//md5 sha256 crc bycrypt are different example of hashing function 
+
+//sha256 is fast but not good so we go with slow to prevent brute force attacks 
+
+//salting
+
+//to make our password more secure 
+
+//in salting we add some string of usually 32 characters or more  which added with password then hashed to make it more secure 
+
+//with salting we it more secure 
+
+//hackers make reverse look up table in which they have hashform and password which help them to get password 
+
+//we use passport we can signup using any other than password like google facebook 
+
+//it library used to help to authenticate user 
+
+//passport is express compatible authentication middleware 
+
+//npm i passport
+
+//npm i passport-local
+
+//npm i passport-local-mongoose
+
+//passprt local mongoose itself add username hash salt pasword fiels
+
+
+//have method change verify user etc by default 
+
+//configuring strategy 
+
+//passport.intialze()  //intializing passport
+
+//a middleware that intialize password 
+
+//passport.session()
+
+//ability to identify user as he brows from page to page 
+
+//passport.use(new localStrategy(user.authenticate))
+
+//mean all new users should be authenticate thrugh local strategy and the method is used called authenticate 
+
+
+// passport.serializeUser(client.serializeUser());
+
+//   passport.deserializeUser(client.deserializeUser());
+
+//serilize and deserilze user 
+
+//serlize mean to user related information in session
+
+//yo unstore or remove the informatio called deserilze user to remove logout 
+
+// client.register(user,"password");
+
+//check the user is unique or not all other functionality
+
+
+// app.get("/hotel/demo",async(req,res)=>{
+
+//   let user = new client({
+
+//     email:"umarshah",
+//     username:"umar"
+//   })
+
+//   await client.register(user,"password");
+//   res.send("saved")
+// })
+
+//automaticllly store hash salt
+
+
 //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
