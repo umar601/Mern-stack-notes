@@ -5203,19 +5203,45 @@ async function main() {
 //done the authorization using passport in airbnb
 
 
+//now we are starting with react 
 
+//react was made by facebook and now we use latest versions of react call vite react 
 
+//react is also use able buut currently we use vite because it is fast abit from  react 
 
+//react is used to make single page application and no loading is required mean there is no need to reload when we move from one page to another page 
 
+//problem in react is it is not provide that muct seo 
 
+// to insatll react we need command npm create vite@latest
 
+//to run the react app we need command npm run dev 
 
+//file strture
 
+//index.html is the file that show when we run the react app 
 
+//index file have one div with id root and and script type module throght which it render the the all conetnt on the screen the file connected to it is main.jsx
 
+//main.jsx is the file which imaort all the content from the other file and render it the index and html show it onthe screen
 
+//app.jsx is the file we can say that component file where we made component and then show them on the screen 
 
+//jxs is kind we file we write html ans js in on file and in nodemoduele and compiler is that that change the jxs th js internally nad then it show on the consile 
 
+//other files are css files or pics these are only important files 
+
+//jsx stand for javascript xml 
+
+//xml stands for xtensible markup language where we create our custom tags 
+
+//the most important part of the file structure is app.jsx where we import or wite all the components then the are shown on the screen 
+
+//main.jsx app.jsx and all css files are in assests folder and all other pics in src folder which is assest folder  folder 
+
+//we have nodemodules and package json and package lock.json which we studey in backend 
+
+//also we are fimiliar with .gitignore readme.md files
 
 
 
