@@ -5243,6 +5243,54 @@ async function main() {
 
 //also we are fimiliar with .gitignore readme.md files
 
+//way to write component 
+
+// function FirstComponent(){
+
+//   return<>
+//   <h1>hello FirstComponent</h1>
+//   </>
+// }
+
+
+//the function name must be capital we can write it in same file and its better to write it some other file and import in app and then use it 
+
+
+//to simple export ad import write
+
+//export deafult function name 
+
+//in other file
+
+//import functionname form the path 
+
+//named export 
+
+//export {name }
+
+//in other file
+
+//import {title} from path
+
+
+
+//we use default export when we have single value and we want to use it in other file with custom name 
+
+//in default export we can import with the custom name mean with any name 
+
+
+//we use named export when we are export multiple things then we use named export but in import the name is not changed 
+
+//name in named export not change 
+
+
+
+
+
+
+
+
+
 
 
 
