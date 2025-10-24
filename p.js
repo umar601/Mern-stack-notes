@@ -5285,6 +5285,120 @@ async function main() {
 
 
 
+//24-10-2025
+
+
+//writing markup in jsx 
+
+
+
+
+//return the single root elemet but if we want to return multiple element wrap it into div and then return it 
+
+//retur (  <div>
+// <h1>umar</h1>
+// </div>)
+
+
+//and it not possible to return the multiple and it may give the error 
+
+
+//close all the tags it may be simple closing or opening closing it must be closing tag
+
+//<img/>
+
+//closing tag is must 
+
+//we need closing tag for each tag becuase when bebble chnage jsx into js it look for closing tag but when it not find it may throw errro 
+
+//thats why closing tag is important 
+
+
+//camelCase most of case 
+
+//generally follow came case 
+
+
+//we cannot give the class attribute to any tag for that we need to give className 
+
+//almost all other attributes can be given to tags 
+
+
+//we cannot give class because in js class is reserved so we have to give it class name
+
+
+
+//react fragment 
+
+//in react fragment we have not have to amke extra div and retiurn in fragment <></>
+
+
+//eg
+
+// return <></>
+
+//this can combine multiple childern in single elemnent 
+
+//jsx with curly braces 
+
+
+//the code in curly braces is pure js and we can use pure js in that 
+
+//  <h1>2*2={2*2}</h1>
+
+
+//in js we can use pure js and in bracket it execute the pure js code
+
+
+// let name ="umar"
+
+// return<>
+
+// <h1>{name}</h1>
+
+// </>
+
+
+//structure our components 
+
+
+//we have the divide the whole page into small components and try to bulid from to large components
+
+//when we combine multiple componts and we have make new component and combine all in that 
+
+
+// function productlist(){
+
+//   return (
+
+//     <product></product>
+//     <product></product>
+//     <product></product>
+//   )
+// }
+
+
+//instead of copying in app make new component and copy in that na dus ein app 
+
+
+//styling our components
+
+//many styling tools 
+
+
+//divide the styling components wise 
+
+//make ths syling of each componet in its own file and we can write in single file but we cannot do that thats not good appraoch 
+
+
+//webpack allow us to import export in react 
+
+//it even help us to import css files in react 
+
+
+
+
+
 
 
 
