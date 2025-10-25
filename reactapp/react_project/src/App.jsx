@@ -9,6 +9,24 @@ import FirstComponent from './assets/firstcomponent'
 // }
 
 function App() {
+
+
+  let arr = ["good","best"];
+
+  let list = arr.map((item)=>{
+    <li>key={item}</li>
+  })
+
+
+  // console.log(list)
+
+  // let obj ={
+  //   a:"umar",
+  //   b:"abbas"
+  // }
+
+
+  // console.log(obj.a)
  
 
   return <>
@@ -16,9 +34,12 @@ function App() {
     {/* <FirstComponent/>
     <FirstComponent></FirstComponent> */}
 
-    <FirstComponent></FirstComponent>
 
-    <h1>hello</h1>
+    <FirstComponent title="umar" age={10} price={200}/>
+    <FirstComponent op={list}  price={2000}/>
+    <FirstComponent lis={{a:"umar"}}  price={200}/>
+
+    {/* <h1>hello</h1> */}
 
   </>
 }

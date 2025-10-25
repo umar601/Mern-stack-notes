@@ -5397,6 +5397,39 @@ async function main() {
 
 
 
+//compents are the functions that return the ui elements
+
+
+//our ui is made of components 
+
+
+
+//props 
+
+
+//props are the information that we provide to jsx tag
+
+//if we want to pass information to components and this information is called props 
+
+//if we have to pass number we have to wrap in curly braces
+
+
+//we can pass default argumet in function in case of no value like defult parmaeter value in function
+
+
+//if we  want to pass the props of int the we will pass it in brakets {}
+
+//we can also pass arrays and objects 
+
+//make a seprate array and then pass and you can directly pass
+
+
+
+
+
+
+
+
 
 
 
