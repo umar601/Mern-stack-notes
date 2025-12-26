@@ -6,7 +6,7 @@
 // s=s.trim()
 
 
-// // always return new string
+//  always return new string
 
 // console.log(s.length)  // return the length of string
 
@@ -5428,8 +5428,9 @@ async function main() {
 
 // revsion
 
+// let name="umar"
+// console.log(typeof(name))
 
-console.log("hello");
 
 
 
