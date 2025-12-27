@@ -2858,7 +2858,16 @@ let arr=[1,2,3,4,5]
 //require select all things not selective
 
 
-//i f using import use inly export
+//we prefer with import and not withb require as import is used in modern sysytem
+
+//export default mean we are exporting only single and its not require any name and it in importis its not in bracket
+
+//module.exports also not require anem and we can import it with or witout brackte
+
+//simple module.export requuire function anme and its is written at the end and in import it reqire brackte
+
+
+//if using import use only export
 //to export all
 
 // function sum(a,b){

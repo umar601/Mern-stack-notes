@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/umar601/Mern-stack-notes#readme",
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "mongoose": "^8.18.0"
+    "expresss": "^0.0.0",
+    "mongoose": "^8.18.0",
+    "nodemon": "^3.1.11"
   }
 }

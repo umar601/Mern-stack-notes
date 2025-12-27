@@ -222,9 +222,9 @@
 
 // console.dir(document.all)
 
-let h1=document.querySelector("h1");
+// let h1=document.querySelector("h1");
 
-h1.innerText="umar"
+// h1.innerText="umar"
 
 // h1.innerHTML="<u>ali</u>"
 
@@ -257,14 +257,14 @@ h1.innerText="umar"
 
 // p.remove();
 
-let form=document.createElement("form");
-let input=document.createElement("input");
-let button=document.createElement("button");
-button.textContent="submit"
-input.setAttribute("placeholder","enter text")
-h1.append(form);
-form.insertAdjacentElement("afterbegin",input)
-form.insertAdjacentElement("beforeend",button)
+// let form=document.createElement("form");
+// let input=document.createElement("input");
+// let button=document.createElement("button");
+// button.textContent="submit"
+// input.setAttribute("placeholder","enter text")
+// h1.append(form);
+// form.insertAdjacentElement("afterbegin",input)
+// form.insertAdjacentElement("beforeend",button)
 
 
 // input.addEventListener("keyup",(e)=>{
@@ -437,36 +437,36 @@ form.insertAdjacentElement("beforeend",button)
 // console.log(string)
 
 
-let image=document.createElement("img")
-h1.append(image);
+// let image=document.createElement("img")
+// h1.append(image);
 
-let url = "https://dog.ceo/api/breeds/image/random";
+// let url = "https://dog.ceo/api/breeds/image/random";
 
-// fetch(url).then((res)=>{
+// // fetch(url).then((res)=>{
 
-//     return res.json().then((data)=>{
-//         image.setAttribute("src",data.message)
+// //     return res.json().then((data)=>{
+// //         image.setAttribute("src",data.message)
 
         
-//     })
-// })
+// //     })
+// // })
 
 
-async function geneat() {
+// async function geneat() {
 
 
-    let response = await axios.get(url)
+//     let response = await axios.get(url)
 
-    image.setAttribute("src",response.data.message)
+//     image.setAttribute("src",response.data.message)
 
 
     
-}
+// }
 
-geneat().then(()=>{
+// geneat().then(()=>{
 
-   return geneat()
-})
+//    return geneat()
+// })
 //.then(()=>{
 //     return geneat()
 // })
@@ -488,5 +488,17 @@ geneat().then(()=>{
 
 // run();
 
+
+
+// import {sum} from "./sum.js";
+
+// // let sum =require("./sum.js")
+// console.log(sum(2, 3));
+
+
+// import m from './sum.js'
+
+
+// console.log(m.sum(2,3))
 
 
