@@ -16,6 +16,58 @@ app.use(express.urlencoded({extended:true}))
 
 app.use(express.json());
 
+import { name } from "ejs";
+import { Agent } from "http";
+import mongoose from "mongoose";
+import { use } from "react";
+
+
+main.then(()=>{
+    console.log("connected successfully")
+}).catch(()=>{
+    console.log("error")
+})
+
+async function main() {
+
+    await mongoose.connect("mongodb://127.0.0.1:2701/test")
+    
+}
+
+
+const userSchema = new mongoose.Schema({
+
+    name:String,
+    Age:Number,
+    marks:Number
+})
+
+const user = mongoose.model("user",userSchema);
+
+
+let user1=new user({
+    name:"umar"
+})
+user1.save().then(()=>{
+    console.log(res)
+}).catch(()=>{
+    console.log(err)
+})
+
+
+user.insertMany([
+    {}
+]).then(()=>{
+    console.log("Save")
+}).catch(()=>{
+    console.log(err)
+})
+
+user.findById().then(()=>{
+    console.log(re)
+}).catch(()=>{
+    console.log(err)
+})
 // const methodOverride = require("method-override")
 
 // app.use(methodOverride("_method"))
