@@ -4909,6 +4909,25 @@ async function main() {
 // }
 
 
+// function asyncwrap(fun){
+
+//   return function(req,res,next){
+//     fun(req,res,next).catch((er)=>{
+//       next(err)
+//     })
+//   }
+// }
+
+
+// class expresserro extends Error {
+
+//   constructor(status,message){
+//     super();
+//     this.message=message;
+//     this.status=status
+//   }
+// }
+// module.exports= expresserro
 // app.get("/home",asyncWrap(async(req,res,next)=>{
 
 //   // next(new expresserro(400,"not"))
