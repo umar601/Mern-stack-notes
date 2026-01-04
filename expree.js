@@ -116,6 +116,46 @@ app.use((req,res,next)=>{
 // })
 
 
+// res.coookie("name","umar",{signed:true})
+
+// req.flash("key","message");
+
+// res.local({name:umar})
+
+// passport
+// passport-local
+// passport-local-mongoose
+
+
+// passport.intialize();
+
+// passport.session()
+
+// passport.use(new localstrategy(userInfo.authenticate));
+
+// passport.seralizeuser(client.serlizeuser())
+
+// passport.deseralizeuser(client.deserlizeuser())
+
+// clien.register(userInfo,"password")
+
+
+// app.use(
+//     expressSession(
+//         {
+//             secret:"secret",
+//             resave:false,
+//             saveunintialised:true,
+//             coookie:{
+//                 expires:Date.now()+7*24*60*60*1000,
+//                 maxage:Date.now()+7*24*60*60*1000,
+//                 httpOnly:true
+//             }
+//         }
+//     )
+// )
+
+
 app.use((err,req,res,next)=>{
 
     console.log("Error handling middle ware")
